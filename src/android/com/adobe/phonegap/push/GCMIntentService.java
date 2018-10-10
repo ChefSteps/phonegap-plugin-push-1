@@ -355,7 +355,7 @@ public class GCMIntentService extends GcmListenerService implements PushConstant
         PendingIntent deleteIntent = PendingIntent.getActivity(this, requestCode, dismissedNotificationIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 
         NotificationCompat.Builder mBuilder =
-                new NotificationCompat.Builder(context)
+                new NotificationCompat.Builder(context, "Joule Push")
                         .setWhen(System.currentTimeMillis())
                         .setContentTitle(fromHtml(extras.getString(TITLE)))
                         .setTicker(fromHtml(extras.getString(TITLE)))
